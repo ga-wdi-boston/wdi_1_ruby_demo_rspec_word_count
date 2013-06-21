@@ -1,4 +1,6 @@
 require 'word_count'
+require_relative 'spec_helper'
+
 
 describe String, "#unique_word_count" do
   it "should return 0 with an empty string" do
@@ -29,17 +31,16 @@ describe String, "#word_frequency_count" do
     frequencies = empty_string.word_frequency_count
     frequencies.should == {}
   end
-  
+
   it "should return frequency of one when all words are unique" do
     a_string = "I really need some coffee"
     frequencies = a_string.word_frequency_count
     frequencies.values.max.should == 1
   end
-  
+
   it "should return frequency of two when a word is repeated" do
     a_string = "I really really need some coffee"
     frequencies = a_string.word_frequency_count
     frequencies["really"].should == 2
   end
 end
-    
