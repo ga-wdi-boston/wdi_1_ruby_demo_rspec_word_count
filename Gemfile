@@ -1,3 +1,5 @@
-source 'http://rubygems.org'
-
-gem 'rspec'
+source 'https://rubygems.org'
+ruby '2.2.0'
+gem 'rspec', '~> 3.1'
+gem 'byebug'
+gem 'pry'
